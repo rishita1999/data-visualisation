@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{ background-color: #333; margin : 0;  font-family : Segoe UI;}
+            .y-axis .tick line {
+                stroke: lightgrey;
+                stroke-opacity: 0.1;
+                shape-rendering: crispEdges;
+            }
+            .y-axis .tick text {
+                stroke: white;
+                opacity: .4;
+            }
+            .y-axis path
+            {
+                opacity : 0;
+            }
+            rect:hover
+            {
+                cursor: pointer;
+            }
+            #filter{
+                border: none;
+                background-color: grey;
+                padding : 10px;
+            }
+            div.tooltip {
+                position: absolute;
+                padding: 10px;
+                font: 12px sans-serif;
+                background: whitesmoke;
+                line-height: 16px;
+                border-radius: 2px;
+                pointer-events: none;
+                box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                border: 1px solid rgba(81, 203, 238, 1);
+            }
+            h1{
+                color : #fc8119;
+                text-align: center;
+            }
+            .page{display: inline-block; margin: 0 20px;}
+            a:visited{color : white;}
+        </style>
+    </head>
+    <body background="#333">
+        <h1> STUDENTS PERFORMANCE ANALYTICS</h1>
+
+        <div style="text-align: center">
+            <a href="./barChart.html"  class="page" style=" opacity: .5;"><h5 class="page">Students Performance Barchart</h5></a>
+            <a href="./percentage.html"  class="page"><h5 class="page">Subjects Result</h5></a>
+            <a href="./StudentPercent.html"  class="page"><h5 class="page">Individual Performance</h5></a>
+        </div>
+        <div style="text-align: right">
+            <select id="filter">
+                <option>Hindi</option>
+                <option>Sst</option>
+                <option>Sci</option>
+                <option>Maths</option>
+                <option>Eng</option>
+            </select>
+        </div>
+        <span id="app"></span>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+        <script src='d3.js'></script>
+    </body>
+</html>
